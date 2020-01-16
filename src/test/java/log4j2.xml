@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="LOG_PATTERNFILES">%d{dd MMM yyyy HH:mm:ss.SSS}  [%level{WARN=WRN, ERROR=ERR, INFO=INF}] - %l %msg%n</Property>
+        <Property name="LOG_PATTERNINFO">%d{dd MMM yyyy HH:mm:ss.SSS}  %highlight{ [%level{WARN=WRN, ERROR=ERR, INFO=INF}]} - %l %msg%n</Property>
+        <Property name="LOG_PATTERNERRORFATAL">%d{dd MMM yyyy HH:mm:ss.SSS}  %highlight{ [%level{WARN=WRN, ERROR=ERR, INFO=INF}]} - %l  %highlight{%msg%n}</Property>
+    </Properties>
+    <Appenders>
+        <Console name="ConsoleI"  target="SYSTEM_OUT">
+            <!--  en el PatternLayout la variable disableAnsi poner en false para permitir ANSI en consola (colores,caracteres,etc) -->
+            <PatternLayout disableANSI="true" pattern="${LOG_PATTERNINFO}"/>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </Console>
+        <Console name="ConsoleEF"  target="SYSTEM_OUT">
+            <!--  en el PatternLayout la variable disableAnsi poner en false para permitir ANSI en consola (colores,caracteres,etc) -->
+            <PatternLayout disableANSI="true" pattern="${LOG_PATTERNERRORFATAL}"/>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="fatal" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="DENY" onMismatch="DENY"/>
+            </Filters>
+        </Console>
+        <RollingFile name="gauge" fileName="logs/gauge.log" filePattern=" ">
+            <LevelRangeFilter minLevel="error" maxLevel="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!--  en el PatternLayout la variable disableAnsi poner en false para permitir ANSI en consola (colores,caracteres,etc) -->
+            <PatternLayout disableANSI="true" pattern="${LOG_PATTERNFILES}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="19500KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="gauge" additivity="true">
+            <AppenderRef ref="gauge"/>
+        </Logger>
+        <Root level="all">
+            <AppenderRef ref="gauge"/>
+            <AppenderRef ref="ConsoleI"/>
+            <AppenderRef ref="ConsoleEF"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

@@ -1,0 +1,19 @@
+<message id='PNS#id#' ts='0000000000000'>
+	<head>
+		<type ref='pns'>
+			<format>pns</format>
+			<mroute>out</mroute>
+		</type>
+		<info>
+			<loginEnterprise>#loginenterprise#</loginEnterprise>
+			<refContract>#ref_contract#</refContract>
+			<customer #clave# KeyValue='#clavevalor#'/>
+			<pnsRefApp>#pns_ref_app#</pnsRefApp>
+		</info>
+	</head>
+	<body>
+		<content>#content# PUBLICO</content>
+		<content private='true'>Private: #content# PRIVADO</content>
+	</body>
+</message>
+

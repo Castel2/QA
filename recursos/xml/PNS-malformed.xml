@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<message id='#id#' ts='1324284779236'>
+
+<head>
+  <type ref='pns'>
+    <format>pns</format>
+    <mroute>out</mroute>
+  </type>
+  <info>  
+    <loginEnterprise>#loginenterprise#</loginEnterprise>
+    <refContract>#ref_contract#</refContract>
+    <customer #clave# KeyValue='#clavevalor#'/> <!-- clave de usuario --><!-- cuando hacemos un envio utilizando el refUser, esta linea quedará simplemente como <customer KeyValue='#clavevalor#'/>   -->
+    <pnsRefApp>#pns_ref_app#</pnsRefApp>
+  </info>
+  
+</head>
+
+<body>

@@ -1,0 +1,39 @@
+<transaction id='UJKuo32INHkDoQ0cAgE0aVyM' ts='1467718062356'>
+  <head>
+    <info/>
+    <types>
+      <messageRef refType='inot' refId='id-test-sdp-1285-7'/>
+    </types>
+    <path>
+      <input>services</input>
+    </path>
+  </head>
+  <body>
+    <message id='id-test-sdp-1285-7' ts='1467718062347'>
+      <head>
+        <type ref='inot'>
+          <format>inot</format>
+          <mroute>out</mroute>
+        </type>
+        <info>
+          <refContract>wtestjson</refContract>
+          <loginEnterprise>CAPITAL</loginEnterprise>
+          <refProduct>wtest</refProduct>
+          <deliveryChannels max='1'>email</deliveryChannels>
+          <refLang>es_ES</refLang>
+          <customer KeyValue='lilicapital'/>
+          <cuentaemail>trabajo</cuentaemail>
+        </info>
+
+        <address-list/>
+         
+        <property-list/>
+      </head>
+      <body>
+        <templateParams ref='#default'>
+          <param name='cities.1.people.1.num'>1302</param>
+        </templateParams>
+      </body>
+    </message>
+  </body>
+</transaction>

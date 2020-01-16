@@ -1,0 +1,20 @@
+<message id="INOT EMAIL con Automated" ts="0000000000000">
+  <head>
+    <type ref="inot">
+      <format>inot</format>
+      <mroute>out</mroute>
+    </type>
+    <info>
+      <loginEnterprise>#loginenterprise#</loginEnterprise>
+      <refContract>#ref_contract#</refContract>
+      <subject>#subject#</subject>
+    </info>
+    <address-list>
+      <address type="to" class="email" ref='#destinatario#'/>
+      <address type="from" class="email" ref='#remitente#'/>
+    </address-list>
+  </head>
+  <body>
+    <content>#content#</content>
+  </body>
+</message>

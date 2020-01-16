@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<message id='SMS desde Automated' ts='0000000000000'>
+  <head>
+    <type ref='sms'>
+      <format>text</format>
+      <mroute>MT</mroute>
+    </type>
+    <info>
+      <gsmDest>#gsmdest#</gsmDest>
+      <loginEnterprise>#loginenterprise#</loginEnterprise>
+      <refContract>#ref_contract#</refContract>
+      <customer KeyValue='#refUser#'/>
+    </info>
+  </head>
+  <body>
+    <contentOut>#content#</contentOut>
+  </body>
+</message>

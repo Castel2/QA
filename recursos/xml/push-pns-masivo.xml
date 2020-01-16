@@ -1,0 +1,41 @@
+<message id='TC 10.01 PNS Masivo' ts='1358508500723' massive='true'>
+
+	<head>
+
+	<type ref='pns'>
+		<format>pns</format>
+		<mroute>out</mroute>
+	</type>
+	<info>
+		<loginEnterprise>#loginenterprise#</loginEnterprise>
+		<refContract>#ref_contract#</refContract>
+	</info>
+
+	<!-- Conjunto de parámetros para el envío masivo -->
+	<massive>
+
+		<!-- Lista de aplicaciones móviles -->
+		<app-list>
+			<app>
+				<ref>#pns_ref_app#</ref> <!-- Referencia de la aplicación -->
+			</app>
+		</app-list>
+		 
+
+		<!-- Lista de proveedores -->
+		<provider-list>
+			<provider>Google</provider>
+			<provider>Apple</provider>
+		</provider-list>
+
+	</massive>
+
+</head>
+
+<body>
+
+<content type='text/plain'>#content#</content>
+
+</body>
+
+</message>

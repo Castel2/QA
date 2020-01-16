@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<message id='#id#' ts='1485444792892'>
+  <head>
+    <type ref='sms'>
+      <format>text</format>
+      <mroute>MT</mroute>
+    </type>
+    <info>
+      <gsmDest>#gsmdest#</gsmDest>
+      <loginEnterprise>#loginenterprise#</loginEnterprise>
+      <refContract>#ref_contract#</refContract>
+    </info>
+  </head>
+  <body>

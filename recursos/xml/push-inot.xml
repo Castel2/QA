@@ -1,0 +1,17 @@
+<message id='Prueba inot' ts='0000000000000'>
+  <head>
+    <type ref='inot'>
+      <format>inot</format>
+      <mroute>out</mroute>
+    </type>
+    <info>
+      <refContract>#ref_contract#</refContract>
+      <loginEnterprise>#loginenterprise#</loginEnterprise>
+      <customer KeyValue='#clavevalor#'/>
+      <subject>#subject#</subject>
+    </info>
+  </head>
+  <body>
+    <content type='text/plain'>#content#</content>
+  </body>
+</message>

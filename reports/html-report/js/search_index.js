@@ -1,0 +1,1 @@
+var index = {"Tags":{},"Specs":{"Specification Heading":["specs/14.Transaccionamiento/14.03_ReadLogs_ActividadPrioridad.html"]}};

@@ -1,0 +1,37 @@
+<transaction id='UJKuo32INHkDoQ0cAgE0aVyM' ts='1467718062356'>
+  <head>
+    <info/>
+    <types>
+      <messageRef refType='inot' refId='sdp-1285'/>
+    </types>
+    <path>
+      <input>services</input>
+    </path>
+  </head>
+  <body>
+    <message id='sdp-1285' ts='1467718062347'>
+      <head>
+        <type ref='inot'>
+          <format>inot</format>
+          <mroute>out</mroute>
+        </type>
+        <info>
+          <refContract>#ref_contract#</refContract>
+          <loginEnterprise>#loginenterprise#</loginEnterprise>
+          <refProduct>#ref_product#</refProduct>
+          <deliveryChannels>sms</deliveryChannels>
+          <customer KeyValue='#refcustomer#'/>
+        </info>
+
+        <address-list/>
+         
+        <property-list/>
+      </head>
+      <body>
+        
+		<content>#content#</content>
+		
+      </body>
+    </message>
+  </body>
+</transaction>
